@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/firstName"
+        android:layout_width="333dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:hint="First name"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/lastName"
+        app:layout_constraintEnd_toEndOf="@+id/lastName"
+        app:layout_constraintStart_toStartOf="@+id/lastName" />
+
+    <EditText
+        android:id="@+id/lastName"
+        android:layout_width="333dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="Last name"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="@+id/email"
+        app:layout_constraintStart_toStartOf="@+id/email" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="334dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintStart_toStartOf="@+id/password" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="338dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="48dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/lab7_btn"
+        app:layout_constraintEnd_toEndOf="@+id/lab7_btn"
+        app:layout_constraintStart_toStartOf="@+id/lab7_btn" />
+
+    <Button
+        android:id="@+id/lab7_btn"
+        android:layout_width="254dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="208dp"
+        android:text="Create an account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="344dp"
+        android:layout_height="35dp"
+        android:text="Lab 7 - Let's create an account!"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/firstName"
+        app:layout_constraintEnd_toEndOf="@+id/firstName"
+        app:layout_constraintStart_toStartOf="@+id/firstName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.716" />
+</androidx.constraintlayout.widget.ConstraintLayout>
