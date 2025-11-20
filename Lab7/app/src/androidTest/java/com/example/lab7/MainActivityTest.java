@@ -18,15 +18,15 @@ public class MainActivityTest {
     public ActivityScenarioRule<MainActivity> mActivityTestRule =
             new ActivityScenarioRule<MainActivity>(MainActivity.class);
     private MainActivity mActivity = null;
+    private MainActivity main;
     private TextView text;
 
     @Before
     public void setUp() throws Exception {
-        mActivity = mActivityTestRule.getActivity(); // getScenario()
+        mActivity = mActivityTestRule.getScenario().onActivity(activity -> main = activity);
     }
 
     @Test
-    @UiThreadTest
     public void checkFirstName() throws Exception{
         assertNotNull(mActivity.findViewById(R.id.firstName));
         text.setText("user1");
