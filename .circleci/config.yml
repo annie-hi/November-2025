@@ -11,7 +11,7 @@ jobs:
       - run: ./gradlew androidDependencies
       - run: ./gradlew lint test
       - restore_cache:
-          key: jars-{{ checksum "build.gradle.kts" }}-{{ checksum  "app/build.gradle.kts" }}
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
          name: Chmod permissions  
          command: sudo chmod +x ./gradlew
@@ -21,7 +21,7 @@ jobs:
       - save_cache:
           paths:
             - ~/.gradle
-          key: jars-{{ checksum "build.gradle.kts" }}-{{ checksum  "app/build.gradle.kts" }}
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
           name: Run UnitTest
           command: ./gradlew test
