@@ -1,37 +1,13 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/project/Lab7
+    working_directory: ~/November-2025/Lab7
     docker:
       - image: cimg/android:2025.11
     environment:
       JVM_OPTS: -Xmx3200m
     steps:
       - checkout
-
-
-      - run:
-    name: Debug directory structure
-    command: |
-      echo "Current directory:"
-      pwd
-      echo
-      echo "Files here:"
-      ls -al
-      echo
-      echo "Files in ~/project:"
-      ls -al ~/project
-      echo
-      echo "Files in ~/project/Lab7:"
-      ls -al ~/project/Lab7 || echo "Lab7 folder NOT FOUND"
-
-
-
-
-
-
-
-
 
       - run: ./gradlew androidDependencies
 
