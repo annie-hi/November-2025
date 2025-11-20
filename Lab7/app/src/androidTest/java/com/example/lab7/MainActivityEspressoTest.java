@@ -40,7 +40,7 @@ public class MainActivityEspressoTest {
         onView(withId(R.id.lab7_btn)).perform(click());
         onView(withText("Invalid firstname")).check(matches(isDisplayed()));
     }
-    
+
     @Test
     public void lastNameIsValid(){
         onView(withId(R.id.firstName)).perform(typeText("test"), closeSoftKeyboard());
