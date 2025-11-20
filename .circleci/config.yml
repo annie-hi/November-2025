@@ -1,16 +1,13 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/November-2025/Lab7/
+    working_directory: ~/Lab7
     docker:
       - image: cimg/android:2025.11
     environment:
       JVM_OPTS: -Xmx3200m
     steps:
       - checkout
-      - run:
-         name: Show working directory 
-         command: pwd
       - run: ./gradlew androidDependencies
       - run: ./gradlew lint test
       - restore_cache:
